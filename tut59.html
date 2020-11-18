@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Date and Time</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+
+    <script>
+        console.log('Tut 59. date and time tutorial')
+
+        let dt = new Date(0); //Date from first reference
+        console.log(dt)
+
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        let newDate = new Date('2029-09-30')
+        console.log(newDate)
+
+        newDate = new  Date(3020, 4, 6, 9, 3, 2, 24);
+        console.log(newDate)
+
+        let yr = newDate.getFullYear()
+        console.log(yr)
+
+        let dt1 = newDate.getDate()
+        console.log(dt1)
+
+        newDate.setDate(5);
+        console.log(newDate)
+    </script>
+</body>
+</html>
