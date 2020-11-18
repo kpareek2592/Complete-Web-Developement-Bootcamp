@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Functions</title>
+</head>
+<body>
+    
+    <script>
+        var str = 'This is a string';
+        console.log(str)
+
+        // gives first occurance of a substring
+        var position = str.indexOf('is')
+        console.log(position)
+
+        // gives last occurance of a substring
+        position = str.lastIndexOf('is')
+        console.log(position)
+
+        // substring from a string
+        var substr = str.slice(1,7) //slice can take negative values as well.
+        console.log(substr)
+
+        substr = str.substring(1,7)
+        console.log(substr)
+
+        substr = str.substr(1,8) //second parameter is length
+        console.log(substr)
+
+        var replaced = str.replace('string', 'Harry');
+        console.log(replaced)
+
+        console.log(str.toUpperCase())
+        console.log(str.toLowerCase())
+
+        var newstring = str.concat(' New String');
+        console.log(newstring)
+
+        var strWithWhiteSpaces = '    This     is     with    ';
+        console.log(strWithWhiteSpaces)
+        console.log(strWithWhiteSpaces.trim())
+
+        var char2 = str.charAt(2)
+        console.log(char2)
+
+        var char3 = str.charCodeAt(3) //ASCII Code
+        console.log(char3)
+
+        console.log(str[2])
+        //console.log(str[2:5])
+    </script>
+</body>
+</html>

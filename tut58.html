@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS SetTimeout and ClearTimeout</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+
+    <script>
+        console.log('This is tut 58');
+        function greet(name, byeText){
+            console.log(`Good Morning ${name} ${byeText}`)
+        }
+        
+        setTimeout(greet, 5000, 'Harry', 'TakeCare'); 
+        // setTimeout(greet(), 5000, 'Harry', 'TakeCare'); wrong as it is calling function inside setTimeout. you only have to give function name 
+    </script>
+</body>
+</html>

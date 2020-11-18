@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events</title>
+    <style>
+        #btn{
+            padding: 3px;
+            color: red;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Browser Events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focus
+
+    DOMContentLoaded
+
+    transitionend -->
+
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. A fuga dignissimos impedit nesciunt? Officiis itaque distinctio cumque aliquid deleniti nisi voluptatum laborum quas, id iste facere nulla unde sequi aspernatur fuga quibusdam et, dolor cum exercitationem labore facilis! Incidunt quae totam rerum placeat, itaque iste non dicta doloribus eveniet porro. Totam ad praesentium, ducimus iste cumque necessitatibus amet exercitationem repellat excepturi, voluptate dicta consectetur ut minus esse officia sapiente eligendi architecto culpa quam tempora rerum doloribus! Quo ipsam hic quia. Dicta culpa labore, quod doloribus, aspernatur earum assumenda odit, vero porro distinctio est nulla omnis. Deserunt quod explicabo culpa odio pariatur. Est eos optio corrupti enim, tenetur, exercitationem eum similique at facilis, doloribus excepturi tempore deserunt expedita quae omnis neque asperiores suscipit sit impedit eligendi natus voluptatem. Tenetur eveniet nisi modi voluptas impedit ad ratione perspiciatis ducimus enim, nemo optio. Ut, nemo. Qui minus, ad aliquid architecto similique quae aperiam mollitia fugit ipsam necessitatibus dignissimos voluptas quaerat? Assumenda fuga amet quisquam ducimus saepe provident eligendi aspernatur, temporibus odio corrupti minus molestias veritatis mollitia necessitatibus earum vel! Facere, placeat minus possimus quaerat voluptate aut deserunt similique enim nihil architecto commodi cumque officiis nulla suscipit ex temporibus consectetur ipsam molestiae velit amet atque repudiandae rerum accusamus. Asperiores doloremque voluptatum cum voluptas cupiditate odio reprehenderit fugiat quos, nemo dicta reiciendis cumque illum aperiam itaque quia eius ipsa suscipit voluptatem. Consectetur officiis omnis eius, libero error quas!</p>
+    </div>
+    <button id="btn" onclick = "toggleHide()">Show/Hide</button>
+
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){
+            console.log('Mouse Inside')
+        })
+
+        para.addEventListener('mouseout', function run(){
+            console.log('Mouse Outside')
+        })
+
+
+        function toggleHide(){
+            let para = document.getElementById('para');
+            let btn = document.getElementById('btn');
+
+            if(para.style.display != 'none')
+                para.style.display = 'none';
+            else
+                para.style.display = 'block'
+        }
+    </script>
+</body>
+</html>

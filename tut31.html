@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+</head>
+<style>
+    h1 {
+        background-color: red;
+        color: aqua;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    div p {
+        color: burlywood;
+        font-weight: bold;
+    }
+
+    /* div li p{
+        color: blueviolet;
+        font-weight: bold;
+    } */
+
+    /* > sign works for direct child  */
+    /* div > p{
+        background-color: cornflowerblue;
+        font-family: cursive;
+        color: forestgreen;
+    } */
+
+    /* p is the next sibling of div */
+    div+p {
+        color: fuchsia;
+        background-color: goldenrod;
+    }
+</style>
+
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>Para1 inside li</p>
+                </li>
+                <li class="item">
+                    <p>Para2 inside li</p>
+                </li>
+                <li class="item">
+                    <p>Para3 inside li</p>
+                </li>
+                <li class="item">
+                    <p>Para4 inside li</p>
+                </li>
+                <p>This is a para inside ul</p>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost para</p>
+</body>
+
+</html>

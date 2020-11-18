@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child sudo selectors</title>
+    <style>
+        .container {
+            display: block;
+            margin: auto;
+            width: 240px;
+        }
+
+        input {
+            display: block;
+        }
+
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+        a[target] {
+
+            font-family: cursive;
+            color: indianred;
+        }
+
+        a[target='_self'] {
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: khaki;
+        }
+
+        /* this will apply css for 3rd child  */
+        li:nth-child(3) {
+            color: lawngreen;
+        }
+
+        /* this will apply css for every 2nd element where n starts from 0 */
+        li:nth-child(2n+0) {
+            color: red;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li:nth-child(3n+3) {
+            background-color: lightcoral;
+        }
+
+        /* odd child  */
+        li:nth-child(odd) {
+            font-weight: bold;
+        }
+
+        /* even child  */
+        li:nth-child(even) {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" name="" id="" placeholder="Enter your name">
+            <input type="password" name="" id="" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">Item1</li>
+            <li class="item" id="item-2">Item2</li>
+            <li class="item" id="item-3">Item3</li>
+            <li class="item" id="item-4">Item4</li>
+            <li class="item" id="item-5">Item5</li>
+            <li class="item" id="item-6">Item6</li>
+            <li class="item" id="item-7">Item7</li>
+            <li class="item" id="item-8">Item8</li>
+            <li class="item" id="item-9">Item9</li>
+            <li class="item" id="item-10">Item10</li>
+        </ul>
+    </div>
+</body>
+
+</html>
