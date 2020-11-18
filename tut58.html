@@ -7,7 +7,8 @@
 </head>
 <body>
     <div class="container">
-        This is a container
+        This is a container <br>
+        <span id="time"></span>
     </div>
 
     <script>
@@ -16,8 +17,19 @@
             console.log(`Good Morning ${name} ${byeText}`)
         }
         
-        setTimeout(greet, 5000, 'Harry', 'TakeCare'); 
+        timeout = setTimeout(greet, 5000, 'Harry', 'TakeCare'); 
+        // clearTimeout(timeout)
         // setTimeout(greet(), 5000, 'Harry', 'TakeCare'); wrong as it is calling function inside setTimeout. you only have to give function name 
+
+        //setInterval(greet, 2000, 'Harry', 'TakeCare');
+
+        function displayTime(){
+            time = new Date();
+            console.log(time)
+            document.getElementById('time').innerHTML = time;
+        }
+
+        setInterval(displayTime, 1000);
     </script>
 </body>
 </html>
